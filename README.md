@@ -2,9 +2,12 @@
 
 Usefull script to unhide reddit posts.
 
-## Dependencies
-* [PRAW](https://github.com/praw-dev/praw/)
-*From the official documentation and github page*, PRAW is supported on python 3.5+. The recommended way to install PRAW is via pip:
+## Dependencies 
+
+* [PRAW](https://github.com/praw-dev/praw/) 
+
+*From the official documentation and github page*, PRAW is supported on python 3.5+. The recommended way to install PRAW is via pip: 
+
 `pip install praw`
 
 ## Usage
@@ -14,7 +17,8 @@ Usefull script to unhide reddit posts.
     - **App type**: Choose the *script* option
     - **description**: You can leave this blank
     - **about url**: You can leave this blank
-    - **redirect url**: http://www.example.com/unused/redirect/uri (We won't be using this as a redirect)
+    - **redirect url**: http://www.example.com/unused/redirect/uri (We won't be using this as a redirect) 
+
 *Note*: These examples will only work for script type apps, which will ONLY have access to accounts registered as "developers" of the app and require the application to know the user's password.
 
 * Click on "Create"
@@ -37,6 +41,3 @@ user_agent='bot user agent'
 
 * Choose the number of days from which you want to unhide the posts.
 * Enjoy!
-
-### 
-Based my first part of the [Usage](https://github.com/j-seixas/reddit-unhide-posts#usage) [here](https://github.com/reddit-archive/reddit/wiki/OAuth2-Quick-Start-Example#first-steps)
