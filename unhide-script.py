@@ -1,10 +1,22 @@
 import praw
+import time
 
-print('Insert your reddit username: ')
-nickname = input()
-print(nickname)
-print('Insert your reddit password: ')
-passw = input()
-print(passw)
+days = input("Unhide within how many days?")
 
-reddit = praw.Reddit(password='1guiwevlfo00esyy', user_agent='testscript by /u/fakebot3', username='fakebot3')
+reddit = praw.Reddit('bot')
+
+date = int(time.time()) - (int(days) * 24 * 3600)
+unhidden = 0
+lastUnhidden = 1
+hidden = None 
+
+while lastUnhidden != unhidden:
+    lastUnhidden = unhidden
+    hidden = reddit.user.me().hidden(limit=1000)
+
+    for post in hidden:
+        if int(post.created_utc) < date :
+            print("Unhiding ", post.title)
+            post.unhide()
+            unhidden += 1
+print("Successfully unhidden ", unhidden, " posts")
