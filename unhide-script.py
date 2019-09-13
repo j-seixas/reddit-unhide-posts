@@ -1,7 +1,7 @@
 import praw
 import time
 
-days = input("Unhide within how many days?")
+days = input("Unhide from how many days? ")
 
 reddit = praw.Reddit('bot')
 
