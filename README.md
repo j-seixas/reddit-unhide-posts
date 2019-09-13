@@ -1,6 +1,6 @@
 # Reddit Unhide Posts
 
-Usefull script to unhide reddit posts.
+Usefull personal script to unhide reddit posts.
 
 ## Dependencies 
 
